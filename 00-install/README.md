@@ -5,13 +5,13 @@
 Pastikan WSL & Docker Desktop sudah terinstall bila menggunakan Windows.
 
 ```{sh}
-C:\> docker pull ryht/spark-notebook
+PS/CMD> docker pull ryht/spark-notebook:3.5.3
 ```
 
 Silakan unduh [berkas zip](https://github.com/yht/spark-learning/archive/refs/heads/main.zip) proyek ini. Lalu unzip/extract di folder Downloads folder user Anda.
 
 ```
-C:\> docker run --rm -p 4040:4040 -p 8888:8888 -p 8080:8080 -v C:\Users\user\Downloads\spark-learning-main:/home/jovyan/work -e GRANT_SUDO=yes --user root ryht/spark-notebook
+PS/CMD> docker run --rm -p 4040:4040 -p 8888:8888 -p 8080:8080 -v .\spark-learning-main:/work -e GRANT_SUDO=yes ryht/spark-notebook:3.5.3
 ```
 
 Pastikan folder user disesuaikan dengan folder login user Anda.
